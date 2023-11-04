@@ -1,8 +1,7 @@
 import "./App.css";
-import "./components/form/addressForm";
-import AddressForm from "./components/form/addressForm";
-import Navbar from "./components/form/navbar";
-import Footer from "./components/form/footer";
+import Navbar from "./components/navbar";
+import AddressForm from "./components/addressForm";
+import Footer from "./components/footer";
 
 function App() {
   return (

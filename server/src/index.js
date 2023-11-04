@@ -5,6 +5,7 @@ const { formRouter } = require("./routes/form");
 const app = express();
 
 app.use(cors());
+app.use(express.json());
 app.use("/api/v1/", formRouter);
 
 app.listen(process.env.PORT, () => {
