@@ -7,7 +7,7 @@ const getFormData = async (req, res) => {
     console.log(data);
     // const result = await chatgptApiCall("list of popular location");
     const response = dummyRecomendation(data);
-    console.log(response);
+    // console.log(response);
     res.status(200).json({ data: response });
   } catch (error) {
     console.log(error);

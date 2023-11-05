@@ -9,6 +9,8 @@ const dummyRecomendation = (body) => {
   MinAge = parseInt(body.minAge);
   MaxAge = parseInt(body.maxAge);
 
+  // console.log(Complete_Data[location].Food_Items);
+
   All_Food_Items = [];
   for (let i = 0; i < foodCategory.length; i++) {
     All_Food_Items = [

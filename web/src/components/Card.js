@@ -14,7 +14,7 @@ import Button from "@mui/material/Button";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
 
-const DestinationCard = ({ title, subheader, description }) => {
+const DestinationCard = ({ title, subheader, description, img }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -32,7 +32,8 @@ const DestinationCard = ({ title, subheader, description }) => {
     <ThemeProvider theme={theme}>
       <Card
         sx={{
-          maxWidth: 345,
+          maxWidth: 400,
+          height: 400,
           margin: "10px",
           borderRadius: "15px",
           border: "1px solid grey", // Add a black border
@@ -48,7 +49,7 @@ const DestinationCard = ({ title, subheader, description }) => {
             style: { textAlign: "right", marginTop: "-30px" },
           }}
         />
-        <CardMedia component="img" height="194" image="/1.png" />
+        <CardMedia component="img" height="194" image={img} />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
             {description}
@@ -75,12 +76,14 @@ export default function TopDestinations() {
       subheader: "7 days trip",
       description:
         "Explore the bustling streets of Mumbai and enjoy the rich culture and delicious street food.",
+      img: "./mumbai.jpeg",
     },
     {
       title: "Banglore",
       subheader: "5 days trip",
       description:
         "Experience the tech hub of India in Bangalore and visit beautiful parks and gardens.",
+      img: "./bangalore.jpeg",
     },
     {
       title: "Hyderabad",
@@ -88,6 +91,7 @@ export default function TopDestinations() {
       subheader: "10 days trip",
       description:
         "Visit the historic city of Hyderabad and savor the famous Hyderabadi biryani.",
+      img: "./hyderabad.jpeg",
     },
     {
       title: "Chandigarh",
@@ -95,18 +99,21 @@ export default function TopDestinations() {
       subheader: "6 days trip",
       description:
         "Explore the well-planned city of Chandigarh with its beautiful gardens and architecture.",
+      img: "./chandigarh.jpeg",
     },
     {
       title: "Delhi",
       subheader: "8 days trip",
       description:
         "Discover the historical landmarks and vibrant markets of Delhi, India's capital.",
+      img: "./delhi.jpeg",
     },
     {
       title: "Kolkata",
       subheader: "9 days trip",
       description:
         "Experience the cultural diversity of Kolkata and indulge in the city's delectable street food.",
+      img: "./kolkata.jpeg",
     },
   ];
 
@@ -116,7 +123,16 @@ export default function TopDestinations() {
         Top Destinations
       </Typography>
 
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          width: "90%",
+          margin: "1rem auto",
+          gap: "1rem",
+        }}
+      >
         {destinations.map((destination, index) => (
           <DestinationCard key={index} {...destination} />
         ))}

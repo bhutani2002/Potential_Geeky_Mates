@@ -75,7 +75,7 @@ function ResponsiveAppBar() {
               letterSpacing: "4px",
             }}
           >
-            PGM
+            Travel Buddy
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

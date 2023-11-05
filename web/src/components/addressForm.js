@@ -45,8 +45,8 @@ const currencies = [
     label: "Mumbai",
   },
   {
-    value: "Banglore",
-    label: "Banglore",
+    value: "Bangalore",
+    label: "Bangalore",
   },
   {
     value: "Chandigarh",
@@ -75,16 +75,16 @@ const food = [
     label: "Mexican",
   },
   {
-    value: "Homemade Style",
-    label: "Homemade Style",
+    value: "Homemade",
+    label: "Homemade",
   },
   {
     value: "Punjabi",
     label: "Punjabi",
   },
   {
-    value: "South Indian",
-    label: "South Indian",
+    value: "South_Indian",
+    label: "South_Indian",
   },
   {
     value: "Chinese",
@@ -110,7 +110,7 @@ const places = [
   },
 ];
 
-export default function AddressForm() {
+export default function AddressForm({ setData }) {
   const [noOfPeople, setNoOfPeople] = useState("");
   const [noOfDays, setNoOfDays] = useState("");
   const [planStay, setPlanStay] = useState("");
@@ -124,8 +124,6 @@ export default function AddressForm() {
   const maxCharacterLimit = 600;
   const options = Array.from({ length: 6 }, (_, i) => (i + 1) * 10);
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-  console.log(options);
 
   const handleDescriptionChange = (event) => {
     const inputValue = event.target.value;
@@ -155,6 +153,7 @@ export default function AddressForm() {
         minAge,
         maxAge,
       });
+      setData(response.data.data);
     } catch (error) {
       console.log(error);
     }

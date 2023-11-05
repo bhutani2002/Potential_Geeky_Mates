@@ -66,10 +66,8 @@ const Footer = () => {
     <Root>
       <Container>
         <LeftColumn>
-          <CompanyName variant="h6">PGM</CompanyName>
-          <Tagline variant="body2">
-            Building the future of travel experiences.
-          </Tagline>
+          <CompanyName variant="h6">Travel Buddy</CompanyName>
+          <Tagline variant="body2">Building the future of travel experiences.</Tagline>
         </LeftColumn>
         <RightColumn>
           <Columns>

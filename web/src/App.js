@@ -5,15 +5,17 @@ import Footer from "./components/footer";
 import DestinationCard from "./components/Card";
 import DataTable from "./components/Table";
 import HeroSection from "./components/HeroSection";
+import { useState } from "react";
 
 function App() {
+  const [data, setData] = useState();
   return (
     <div className="App">
       <Navbar />
       <HeroSection />
       <DestinationCard />
-      <AddressForm />
-      <DataTable />
+      <AddressForm setData={setData} />
+      <DataTable data={data} />
       <Footer />
     </div>
   );
