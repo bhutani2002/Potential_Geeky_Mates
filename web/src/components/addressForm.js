@@ -144,7 +144,7 @@ export default function AddressForm({ setData }) {
       interestedPlaces,
     });
     try {
-      const response = await axios.post("https://potential-geeky-mates.vercel.app/", {
+      const response = await axios.post("https://potential-geeky-mates.vercel.app/api/v1/", {
         noOfDays,
         noOfPeople,
         planStay,
