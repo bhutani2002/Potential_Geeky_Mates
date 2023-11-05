@@ -1,13 +1,15 @@
 import "./App.css";
-import AddressForm from "./components/form/addressForm";
-import Navbar from "./components/form/navbar";
-import Footer from "./components/form/footer";
-import DestinationCard from "./components/form/Card";
+import AddressForm from "./components/addressForm";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+import DestinationCard from "./components/Card";
+import HeroSection from "./components/HeroSection";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <HeroSection />
       <DestinationCard />
       <AddressForm />
       <Footer />

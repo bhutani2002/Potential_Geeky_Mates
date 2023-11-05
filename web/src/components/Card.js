@@ -48,7 +48,7 @@ const DestinationCard = ({ title, subheader, description }) => {
             style: { textAlign: "right", marginTop: "-30px" },
           }}
         />
-        <CardMedia component="img" height="194" image="../../Assets/1.png" />
+        <CardMedia component="img" height="194" image="/1.png" />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
             {description}
@@ -116,9 +116,7 @@ export default function TopDestinations() {
         Top Destinations
       </Typography>
 
-      <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
-      >
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {destinations.map((destination, index) => (
           <DestinationCard key={index} {...destination} />
         ))}

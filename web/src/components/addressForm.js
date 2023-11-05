@@ -93,20 +93,20 @@ const food = [
 ];
 const places = [
   {
-    value: "Religious Places",
-    label: "Religious Places",
+    value: "Religious",
+    label: "Religious",
   },
   {
-    value: "Fun Activities",
-    label: "Fun Activities",
+    value: "Fun_Adventure",
+    label: "Fun_Adventure",
   },
   {
-    value: "Heritage",
-    label: "Heritage",
+    value: "Heritage_Monuments_Places",
+    label: "Heritage_Monuments_Places",
   },
   {
-    value: "Local Attractions",
-    label: "Local Attractions",
+    value: "Local_Attractions",
+    label: "Local_Attractions",
   },
 ];
 
@@ -117,9 +117,15 @@ export default function AddressForm() {
   const [typeOfFood, setTypeOfFood] = useState("");
   const [interestedPlaces, setInterestedPlaces] = useState("");
   const [interestedOutdoor, setInterestedOutdoor] = useState("");
+  const [minAge, setMinAge] = useState("");
+  const [maxAge, setMaxAge] = useState("");
 
   const [description, setDescription] = useState("");
   const maxCharacterLimit = 600;
+  const options = Array.from({ length: 6 }, (_, i) => (i + 1) * 10);
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  console.log(options);
 
   const handleDescriptionChange = (event) => {
     const inputValue = event.target.value;
@@ -146,6 +152,8 @@ export default function AddressForm() {
         typeOfFood,
         interestedOutdoor,
         interestedPlaces,
+        minAge,
+        maxAge,
       });
     } catch (error) {
       console.log(error);
@@ -161,11 +169,18 @@ export default function AddressForm() {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <TextField
-              label="How many people will be in your travel group"
-              placeholder="Number of People"
+              label="What is the day of visit ? "
+              placeholder="Day of visit"
               fullWidth
+              select
               onChange={(e) => setNoOfPeople(e.target.value)}
-            />
+            >
+              {days.map((option) => (
+                <MenuItem key={option} value={option}>
+                  {option}
+                </MenuItem>
+              ))}
+            </TextField>
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
@@ -231,6 +246,36 @@ export default function AddressForm() {
               fullWidth
               onChange={(e) => setInterestedOutdoor(e.target.value)}
             />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              label="What is the age of the youngest in your group?"
+              placeholder="Age of the Youngest"
+              fullWidth
+              select
+              onChange={(e) => setMinAge(e.target.value)}
+            >
+              {options.map((option) => (
+                <MenuItem key={option} value={option}>
+                  {option}
+                </MenuItem>
+              ))}
+            </TextField>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              label="What is the age of the oldest in your group?"
+              placeholder="Age of the Oldest"
+              fullWidth
+              select
+              onChange={(e) => setMaxAge(e.target.value)}
+            >
+              {options.map((option) => (
+                <MenuItem key={option} value={option}>
+                  {option}
+                </MenuItem>
+              ))}
+            </TextField>
           </Grid>
           <Grid item xs={12}>
             <TextField
