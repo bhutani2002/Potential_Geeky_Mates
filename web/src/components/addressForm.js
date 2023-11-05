@@ -143,7 +143,7 @@ export default function AddressForm({ setData }) {
     });
 
     try {
-      const response = await axios.post("http://localhost:8000/api/v1/getRecomendation", {
+      const response = await axios.post("https://potential-geeky-mates.vercel.app/", {
         noOfDays,
         noOfPeople,
         planStay,
