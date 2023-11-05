@@ -5,7 +5,7 @@ const { formRouter } = require("./routes/form");
 const app = express();
 
 app.use(cors({
-    origin: ['https://deploy-mern-1whq.vercel.app'],
+    origin: ['https://deploy-mern-travel-buddies.vercel.app'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT'], // Specify the allowed HTTP methods
   }));
