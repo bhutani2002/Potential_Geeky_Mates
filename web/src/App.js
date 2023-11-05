@@ -3,6 +3,7 @@ import AddressForm from "./components/form/addressForm";
 import Navbar from "./components/form/navbar";
 import Footer from "./components/form/footer";
 import DestinationCard from "./components/form/Card";
+import DataTable from "./components/form/Table";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Navbar />
       <DestinationCard />
       <AddressForm />
-
+      <DataTable />
       <Footer />
     </div>
   );
