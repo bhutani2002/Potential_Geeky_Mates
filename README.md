@@ -1,6 +1,6 @@
 # HACKOUT 2023 - Submission Report
 
-### Deployed Website Link - [Trip Buddy](http://app/)
+### Deployed Website Link - [Trip Buddy](https://deploy-mern-travel-buddies.vercel.app/)
 
 This is the official code repository for Potential_Geeky_Mates. This complete application is developed during HACKOUT 2023, the hackathon conducted by Headout.
 
