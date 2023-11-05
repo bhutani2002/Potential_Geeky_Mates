@@ -125,8 +125,6 @@ export default function AddressForm({ setData }) {
   const options = Array.from({ length: 6 }, (_, i) => (i + 1) * 10);
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-  axios.defaults.withCredentials = true;
-
   const handleDescriptionChange = (event) => {
     const inputValue = event.target.value;
     if (inputValue.length <= maxCharacterLimit) {
