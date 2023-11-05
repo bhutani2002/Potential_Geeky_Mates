@@ -3,6 +3,7 @@ import AddressForm from "./components/addressForm";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import DestinationCard from "./components/Card";
+import DataTable from "./components/Table";
 import HeroSection from "./components/HeroSection";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <HeroSection />
       <DestinationCard />
       <AddressForm />
+      <DataTable />
       <Footer />
     </div>
   );
