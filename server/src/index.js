@@ -12,7 +12,13 @@ app.use(cors({
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "https://deploy-mern-travel-buddies.vercel.app");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
+});
+
+app.options("*", (req, res) => {
+  res.sendStatus(200); // Pre-flight request response
 });
 
 app.use(express.json());
