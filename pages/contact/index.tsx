@@ -218,7 +218,6 @@ const Contact = () => {
                                   lg: "3.7vh",
                                   xl: "2.3vh",
                                 },
-                                marginRight: "0vh",
                               }}
                             />
                           </InputAdornment>
@@ -245,7 +244,6 @@ const Contact = () => {
                                   lg: "3.7vh",
                                   xl: "2.3vh",
                                 },
-                                marginRight: "0vh",
                               }}
                             />
                           </InputAdornment>
@@ -271,7 +269,6 @@ const Contact = () => {
                                   lg: "3.7vh",
                                   xl: "2.3vh",
                                 },
-                                marginRight: "0vh",
                               }}
                             />
                           </InputAdornment>
@@ -297,7 +294,6 @@ const Contact = () => {
                                   lg: "3.7vh",
                                   xl: "2vh",
                                 },
-                                marginRight: "0vh",
                               }}
                             />
                           </InputAdornment>
@@ -323,7 +319,6 @@ const Contact = () => {
                                   lg: "3.7vh",
                                   xl: "2vh",
                                 },
-                                marginRight: "0vh",
                               }}
                             />
                           </InputAdornment>
@@ -349,7 +344,6 @@ const Contact = () => {
                                   lg: "3.7vh",
                                   xl: "2vh",
                                 },
-                                marginRight: "0vh",
                               }}
                             />
                           </InputAdornment>
